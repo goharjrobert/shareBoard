@@ -1,18 +1,17 @@
-var pages = ['home', 'shares', 'add', 'login', 'register'];
+var pages = ['home', 'shares', 'login', 'register'];
 
 function switchClass(className) {
     //alert(className);
     var element;
     for(var i = 0; i < pages.length; i++){
-        if(className == pages[i]) {
-            element = document.getElementById(pages[i]);
+        element = document.getElementById(pages[i]);
+        if(element.classList.contains('active')) {
             element.classList.remove("active");
         }
-        else{
+        console.log(pages[i] + ' ' + className);
+        if(className === pages[i]){
             element = document.getElementById(className);
             element.classList.add("active");
         }
     }
-
-
 }

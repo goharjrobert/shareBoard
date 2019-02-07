@@ -15,3 +15,4 @@ define("DB_NAME", "share_board");
 // Define URL
 define("ROOT_PATH", "/phpdev.com/");
 define("ROOT_URL", "http://phpdev.com:84/");
+

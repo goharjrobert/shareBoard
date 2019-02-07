@@ -9,7 +9,7 @@
 class ShareModel extends Model
 {
     public function Index(){
-        $this->query('SELECT * FROM shares');
+        $this->query('SELECT * FROM shares ORDER BY create_date DESC');
         $rows = $this->resultSet();
         //print_r($rows);
         return $rows;

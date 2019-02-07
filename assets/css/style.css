@@ -49,3 +49,10 @@
 ::-webkit-scrollbar-thumb:hover {
     background: #a29ea8;
 }
+
+@media(min-width: 768px) {
+    .field-label-responsive {
+        padding-top: .5rem;
+        text-align: right;
+    }
+}
