@@ -5,10 +5,13 @@
  * Date: 2/6/2019
  * Time: 12:08 PM
  */
+//Start Session
+session_start();
 
 //Include Config
 require('config.php');
 
+require('classes/Messages.php');
 require('classes/Bootstrap.php');
 require('classes/Controller.php');
 require('classes/Model.php');

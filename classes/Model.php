@@ -53,4 +53,11 @@ abstract class Model
     public function lastInsertID(){
         return $this->dbh->lastInsertID();
     }
+
+    //To check and see if there is only one row returned with
+    //credentials
+    public function single(){
+        $this->executeQuery();
+        return $this->stmt->fetch(PDO::FETCH_ASSOC);
+    }
 }

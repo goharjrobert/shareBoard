@@ -14,12 +14,29 @@ class User extends Controller
     }
 
     protected function Login(){
-        $viewModel = new UserModel();
-        $this->returnView($viewModel->login(), true);
+        if(!isset($_SESSION['is_logged_in'])) {
+            $viewModel = new UserModel();
+            $this->returnView($viewModel->login(), true);
+        }else{
+            header('Location: '.ROOT_URL);
+        }
     }
 
     protected function Register(){
-        $viewModel = new UserModel();
-        $this->returnView($viewModel->register(), true);
+        if(!isset($_SESSION['is_logged_in'])) {
+            $viewModel = new UserModel();
+            $this->returnView($viewModel->register(), true);
+        }else{
+            header('Location: '.ROOT_URL);
+        }
+    }
+
+    protected function Logout(){
+        unset($_SESSION['is_logged_in']);
+        unset($_SESSION['user_data']);
+        session_destroy();
+        $message = 'Logged Out';
+        Messages::setMessage($message, 'error');
+        header('Location: '. ROOT_URL);
     }
 }
