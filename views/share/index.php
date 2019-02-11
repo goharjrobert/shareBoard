@@ -24,8 +24,12 @@
                     <div class="row">
                         <div class="col">
                             <h5 ><?php echo $item['title'] ?></h5>
-                            <small>Created by: <?php echo $_SESSION['posts'][$item['id']].'<br>'.$item['create_date']; ?>
-                            </small>
+                            <small>Created by: <?php echo $_SESSION['posts'][$item['id']].'<br>'.$item['create_date']; ?></small>
+                            <?php if($item['edit_date'] !== null): ?>
+                            <br>
+                            <small>Post edited on: <?php echo $item['edit_date'] ?></small>
+                            <?php endif; ?>
+
                         </div>
                         <?php if($_SESSION['user_data']['id'] == $item['user_id']): ?>
                         <div class="col">
