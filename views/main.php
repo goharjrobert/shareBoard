@@ -13,14 +13,15 @@
         <title>
             Share Board
         </title>
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/cover.css">
-        <link rel="stylesheet" href="assets/css/style.css">
+<!--        Bootstrap CSS-->
         <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+<!--        Bootstrap Theme CSS-->
         <link rel="stylesheet" href="../assets/css/cover.css">
+<!--        Custom CSS for pages-->
         <link rel="stylesheet" href="../assets/css/style.css">
+<!--        Font awesome icons-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
+<!--        Custom Javascript to change active links-->
         <script type="text/javascript" src="../assets/js/addClass.js"></script>
 
     </head>
@@ -57,7 +58,8 @@
     </div>
     </body>
 
-    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+<!--    Bootstrap Javascript-->
     <script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
+
 
 </html>

@@ -13,7 +13,8 @@ class Messages
         if($type == 'error'){
             $_SESSION['error'] = $text;
         }
-        if($type == 'success'){
+        else{
+            //echo 'Success';
             $_SESSION['success'] = $text;
         }
     }

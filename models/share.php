@@ -74,12 +74,13 @@ class ShareModel extends Model
             return $rows;
         }
         else if(isset($post['update'])){
-            $this->query('UPDATE shares SET title = :title, body = :body, link = :link WHERE id = :id AND user_id = :user_id');
+            $this->query('UPDATE shares SET title = :title, body = :body, link = :link, edit_date = :edit_date WHERE id = :id AND user_id = :user_id');
             $this->bind(':title', $post['title']);
             $this->bind(':body', $post['body']);
             $this->bind(':link', $post['link']);
             $this->bind(':id', (int)$_SESSION['editing_post_num']);
             $this->bind(':user_id', (int)$_SESSION['user_data']['id']);
+            $this->bind(':edit_date', date('Y-m-d G:i:s'));
             $this->executeQuery();
             unset($_SESSION['editing_post_num']);
             $message = $post['title'].' has been updated';
