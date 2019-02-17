@@ -19,12 +19,10 @@ require('classes/Model.php');
 require('controllers/Home.php');
 require('controllers/User.php');
 require('controllers/Share.php');
-require ('controllers/Comment.php');
 
 require('models/home.php');
 require('models/user.php');
 require('models/share.php');
-require('models/comment.php');
 
 $bootstrap = new Bootstrap($_GET);
 

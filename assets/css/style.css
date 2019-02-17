@@ -58,16 +58,9 @@
     color: black!important;
 }
 
-.input-group-addon{
-    margin: auto;
-}
 @media(min-width: 768px) {
     .field-label-responsive {
         padding-top: .5rem;
         text-align: right;
     }
-}
-
-form {
-    display: inline-block; //Or display: inline;
 }
