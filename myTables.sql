@@ -21,10 +21,10 @@ CREATE TABLE shares (
 CREATE TABLE comments (
 	comment_id INT NOT NULL AUTO_INCREMENT,
 	user_id INT NOT NULL, 
-	post_id INT NOT NULL,
+	share_id INT NOT NULL,
 	message TEXT NOT NULL,
 	comment_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY (comment_id),
 	FOREIGN KEY (user_id) REFERENCES users(id),
-	FOREIGN KEY (post_id) REFERENCES shares(id)
+	FOREIGN KEY (share_id) REFERENCES shares(id)
 	);

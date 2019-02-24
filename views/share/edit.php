@@ -13,16 +13,16 @@ $title = "";
 $link = "";
 $body = "";
 $user_id = "";
-$post_id = "";
+$share_id = "";
 foreach($viewModel as $item){
     $title = $item['title'];
     $link = $item['link'];
     $body = $item['body'];
     $user_id = $item['user_id'];
-    $post_id = $item['id'];
+    $share_id = $item['share_id'];
 }
 
-$_SESSION['editing_post_num'] = $post_id;
+$_SESSION['editing_post_num'] = $share_id;
 
 ?>
 

@@ -26,10 +26,11 @@ class UserModel extends Model
             if($row){
                 $_SESSION['is_logged_in'] = true;
                 $_SESSION['user_data'] = array(
-                    "id"    => $row['id'],
+                    "user_id"    => $row['user_id'],
                     "name"  => $row['user_name'],
                     "email" => $row['email']
                 );
+                //echo $row['user_id'];
                 $message = 'Logged in! Welcome '.$_SESSION['user_data']['name'];
                 Messages::setMessage($message, 'success');
                 header('Location: ' . ROOT_URL . 'share');

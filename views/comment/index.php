@@ -6,7 +6,8 @@
  * Time: 7:04 PM
  */
 $share = $viewModel[0][0];
-$comments = $viewModel[1];
+$user_name = $viewModel[1][0];
+$comments = $viewModel[2];
 ?>
 <script>switchClass("shares");</script>
 <div class="card eachShare">
@@ -16,7 +17,16 @@ $comments = $viewModel[1];
                 <h3 class="card-title text-left"><?php echo $share['title']; ?></h3>
             </div>
             <div class="col">
-                <small class="text-right">Posted: <?php echo $share['create_date']; ?></small>
+                <div class="text-right">
+                    <small class="text-right">Posted: <?php echo $share['create_date']; ?></small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="text-left">
+                    <small>Created by: <?php echo $user_name['user_name']; ?></small>
+                </div>
             </div>
         </div>
     </div>
@@ -69,8 +79,8 @@ $comments = $viewModel[1];
     <div class="row">
         <div class="col">
             <form class="form-inline" method="post" action="<?php echo $ROOT_URL; ?>/comment">
-                <input type="hidden" name="postID" value="<?php echo $share['id']; ?>">
-                <input type="hidden" name="userID" value="<?php echo $share['user_id']; ?>">
+                <input type="hidden" name="share_id" value="<?php echo $share['share_id']; ?>">
+                <input type="hidden" name="user_id" value="<?php echo $share['user_id']; ?>">
 
                 <div class="col">
                     <label class="text-left">Add Comment</label>
