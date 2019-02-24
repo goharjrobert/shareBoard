@@ -1,0 +1,30 @@
+CREATE TABLE users (
+	id INT NOT NULL AUTO_INCREMENT,
+	user_name VARCHAR(50) NOT NULL,
+	email VARCHAR(100) NOT NULL,
+	password VARCHAR(100) NOT NULL,
+	PRIMARY KEY (id)
+	);
+	
+CREATE TABLE shares (
+	id INT NOT NULL AUTO_INCREMENT,
+	user_id INT NOT NULL,
+	title VARCHAR(255) NOT NULL,
+	body TEXT NOT NULL,
+	link VARCHAR(255),
+	create_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	edit_date TIMESTAMP NULL,
+	PRIMARY KEY (id),
+	FOREIGN KEY (user_id) REFERENCES users(id)
+	);
+	
+CREATE TABLE comments (
+	comment_id INT NOT NULL AUTO_INCREMENT,
+	user_id INT NOT NULL, 
+	post_id INT NOT NULL,
+	message TEXT NOT NULL,
+	comment_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY (comment_id),
+	FOREIGN KEY (user_id) REFERENCES users(id),
+	FOREIGN KEY (post_id) REFERENCES shares(id)
+	);

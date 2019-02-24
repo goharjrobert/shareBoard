@@ -27,6 +27,12 @@
     overflow-scrolling: auto;
     overflow-y: auto;
 }
+
+.commentWindow{
+    height: 30%;
+    overflow-scrolling: auto;
+    overflow-y: auto;
+}
 /* width */
 ::-webkit-scrollbar {
     width: 7px;
@@ -58,9 +64,22 @@
     color: black!important;
 }
 
+.input-group-addon{
+    margin: auto;
+}
 @media(min-width: 768px) {
     .field-label-responsive {
         padding-top: .5rem;
         text-align: right;
     }
 }
+
+.commentForm, .deleteForm {
+    display: inline-block; //Or display: inline;
+}
+
+.commentText{
+    width: 100%;
+}
+
+

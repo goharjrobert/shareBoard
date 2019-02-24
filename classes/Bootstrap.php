@@ -33,6 +33,7 @@ class Bootstrap{
 
     public function createController(){
         //Check for the class
+
         if(class_exists($this->controller)){
             //Contains object of type controller
             $parents = class_parents($this->controller);
